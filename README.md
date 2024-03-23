@@ -1,5 +1,5 @@
 <p align="center">
-    <img width=100% src="images/cover.png">
+    <img width=100% src="images/screenshots/cover.png">
   </a>
 </p>
 <b><p align="center"> 🪨 Your canary in the coal mine. Keeping you safe online, by staying a step ahead 🐦 </p></b>
@@ -18,9 +18,9 @@ Canary is a Chrome extension that uses the Google Vertex AI to scan the websites
 
 # Examples
 <div style="display: flex;">
-    ![Gif of Canary usage](images/screenshot4.gif)
-    ![Canary usage](images/screenshot1.png)
-    ![Canary usage](images/screenshot2.png)
+    ![Gif of Canary usage](images/screenshots/screenshot4.gif)
+    ![Canary usage](images/screenshots/screenshot1.png)
+    ![Canary usage](images/screenshots/screenshot2.png)
 </div>
 
 # 🙏 Contributions

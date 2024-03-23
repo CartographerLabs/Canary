@@ -5,7 +5,7 @@
   "description": "Your canary in the coal mine. Keeping you safe online, by staying a step ahead.",
   "permissions": ["identity"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "scripts/background.js"
   },
   "content_scripts": [
     {

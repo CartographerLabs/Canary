@@ -42,8 +42,5 @@ Canary follows the Contributor Covenant Code of Conduct. Please make sure [to re
 # 🐛 Bug Reports and Feature Requests
 If you encounter a bug or have a suggestion for a new feature, please open an issue in the GitHub repository. Please provide as much detail as possible, including steps to reproduce the issue or a clear description of the proposed feature. Your feedback is valuable and will help improve Canary for everyone.
 
-# 💛 Thanks
-This tool wouldn't work without [APKTool](https://ibotpeaches.github.io/Apktool/documentation/)! 
-
 # 📜 License
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)

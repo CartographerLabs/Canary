@@ -1,4 +1,14 @@
-console.log("Starting content script");
+// Flag to enable/disable debug mode
+const debugMode = true;
+
+// Debug log function to conditionally log messages based on debug mode
+function debugLog(message) {
+  if (debugMode) {
+    console.log(message);
+  }
+}
+
+debugLog("Starting content script");
 
 // Store the original content of the webpage
 const originalContent = document.body.innerHTML;
@@ -8,16 +18,29 @@ const textContent = document.body.innerText;
 
 // Send the extracted text content to the background script
 chrome.runtime.sendMessage({ action: "sendText", text: textContent }, function(response) {
+  // Handle response from background script
   if (response && response.success) {
-    console.log("Text sent to background script successfully");
-    console.log("Extracted Text:", response.extractedText.replace("[Classification]", "").replace("[Reasoning]", "-")); // Log the extracted text with replacements
-    
-    // Check if the word "publish" is present in the text
-    const containsPublish = response.extractedText.toLowerCase().includes('is extremist');
-    
-    if (containsPublish) {
-      console.log("Extremist content found");
-      // If the word "publish" is found, replace the entire content of the webpage with "no" message
+    debugLog("Text sent to background script successfully");
+
+    // Check for test content
+    const containsTestString = textContent.toLowerCase().includes('is_extremism-test');
+    let responseText;
+
+    if (containsTestString) {
+      debugLog("Is test");
+      // Define response text for test content
+      responseText = '[Classification] Is Extremist [Reasoning] This content is a test. The following is the definition this tool uses for extremism: "Extremism is the promotion or advancement of an ideology based on violence, hatred or intolerance, that aims to: 1. negate or destroy the fundamental rights and freedoms of others; or 2. undermine, overturn or replace the UK’s system of liberal parliamentary democracy and democratic rights; or 3. intentionally create a permissive environment for others to achieve the results in (1) or (2)" ';
+    }
+
+    // Log the extracted text with replacements
+    debugLog("Extracted Text:", responseText.replace("[Classification]", "").replace("[Reasoning]", "-"));
+
+    // Check if extremist content is present in the text
+    const containsExtremism = responseText.toLowerCase().includes('is extremist');
+
+    if (containsExtremism) {
+      debugLog("Extremist content found");
+      // Replace webpage content with error message
       document.body.innerHTML = `
         <div class="central-container">
           <div class="error-container">
@@ -26,15 +49,15 @@ chrome.runtime.sendMessage({ action: "sendText", text: textContent }, function(r
             <br>
             <p class="error-message">We detected potentially harmful content.</p>
             <br>
-            <p class="error-detail">${response.extractedText.replace("[Classification]", "").replace("[Reasoning]", "-")}</p>
+            <p class="error-detail">${responseText.replace("[Classification]", "").replace("[Reasoning]", "-")}</p>
             <br>
             <div class="learn-more-links">
-            <a href="https://www.gov.uk/government/publications/new-definition-of-extremism-2024/new-definition-of-extremism-2024" target="_blank" class="learn-more-link-uk">Learn More (UK)</a>
-            <a href="https://www.fbi.gov/investigate/terrorism" target="_blank" class="learn-more-link-us">Learn More (US)</a>
-          </div>
-          <br>
-          <p>Canary</p>
+              <a href="https://www.gov.uk/government/publications/new-definition-of-extremism-2024/new-definition-of-extremism-2024" target="_blank" class="learn-more-link-uk">Learn More (UK)</a>
+              <a href="https://www.fbi.gov/investigate/terrorism" target="_blank" class="learn-more-link-us">Learn More (US)</a>
             </div>
+            <br>
+            <p>Canary</p>
+          </div>
         </div>
       `;
       
@@ -97,7 +120,7 @@ chrome.runtime.sendMessage({ action: "sendText", text: textContent }, function(r
       `;
       document.head.appendChild(style);
     } else {
-      console.log("No extremist content found");
+      debugLog("No extremist content found");
     }
   } else {
     console.error("Failed to send text to background script");

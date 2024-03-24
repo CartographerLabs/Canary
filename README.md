@@ -16,7 +16,23 @@
 
 Canary is a Chrome extension that uses the Google Vertex AI to scan the websites you visit for extremist content and block them!
 
-# Example Usage
+# ⚙️ Setup
+## Option 1 - Download from the Chrome web store.
+If you want to use Canary as an end user, I reccomend downloading it from the Chrome webstore.
+
+## Option 2 - Build manually
+You will first need to setup a project on ```console.cloud.google.com``` with the Google Vertex AI API and then setup a ```OAuth 2.0```. Once you have done this you should:
+1) Download the Github repo
+2) Open the ```manifest.json``` and replace the oauth2```client_id``` with your own.
+
+Then, to load your repo: 
+4) Open Chrome and go to the Extensions page by entering ```chrome://extensions``` in a new tab.
+5) Enable Developer Mode by clicking the toggle switch next to Developer mode.
+6) Click the Load unpacked button and select the downloaded repository
+
+
+
+# ⏩ Example Usage
 
 <table>
   <tr>

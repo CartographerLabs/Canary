@@ -1,5 +1,5 @@
 <p align="center">
-    <img width=100% src="images/screenshots/cover.png">
+    <img width=100% src="images/screenshots/cover.gif">
   </a>
 </p>
 <b><p align="center"> 🪨 Your canary in the coal mine. Keeping you safe online, by staying a step ahead 🐦 </p></b>

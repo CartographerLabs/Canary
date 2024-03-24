@@ -22,13 +22,13 @@ If you want to use Canary as an end user, I recommend downloading it from the Ch
 
 ## Option 2 - Build manually
 You will first need to set up a project on ```console.cloud.google.com``` with the Google Vertex AI API and then set up an ```OAuth 2.0```. Once you have done this you should:
-1) Download the Github repo
+1) Download the Github repo.
 2) Open the ```manifest.json``` and replace the oauth2```client_id``` with your own.
 
 Then, to load your unpacked Chrome extension into Chrome: 
 1) Open Chrome and go to the Extensions page by entering ```chrome://extensions``` in a new tab.
 2) Enable Developer Mode by clicking the toggle switch next to Developer mode.
-3) Click the Load unpacked button and select the downloaded repository
+3) Click the Load unpacked button and select the downloaded repository.
 
 # 🔎 Testing 
 Canary is the type of tool that you don't want to go testing on the real thing. That being the case, I have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content, you may need to view this file in a web browser separately to trigger the test.

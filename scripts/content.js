@@ -11,7 +11,7 @@ function debugLog(message) {
 debugLog("Starting content script");
 
 // Store the original content of the webpage
-const originalContent = document.body.innerHTML;
+const originalContent = document.body.outerHTML;
 
 // Extract text content from the webpage
 const textContent = document.body.innerText;
@@ -23,7 +23,7 @@ chrome.runtime.sendMessage({ action: "sendText", text: textContent }, function(r
     debugLog("Text sent to background script successfully");
 
     // Check for test content
-    const containsTestString = textContent.toLowerCase().includes('is_extremism-test');
+    const containsTestString = textContent.toLowerCase().includes('is_extremism_test');
     let responseText;
 
     if (containsTestString) {

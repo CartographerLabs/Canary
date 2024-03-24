@@ -1,6 +1,3 @@
-
-html
-Copy code
 <p align="center">
     <img width="100%" src="images/screenshots/cover.gif">
   </a>

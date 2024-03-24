@@ -31,7 +31,7 @@ Then, to load your unpacked Chrome extension into Chrome:
 3) Click the Load unpacked button and select the downloaded repository.
 
 # 🔎 Testing 
-Canary is the type of tool that you don't want to go testing on the real thing. That being the case, I have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content, you may need to view this file in a web browser separately to trigger the test.
+Canary is the type of tool that you don't want to go testing on the real thing. That being the case, I have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content, you may need to view this file as ```raw``` or in a web browser separately to trigger the test.
 
 # 📝 How It Works
 Canary is a Chrome extension that utilizes the Google Vertex AI API. Canary will gather the content of every page visited by the user and send it across to the LLM with the following prompt

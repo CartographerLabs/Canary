@@ -17,7 +17,7 @@ Copy code
 <br>
 </div>
 
-A Chrome extension that looks out for and blocks extremist content!
+A Chrome extension that looks out for and blocks extremist content! Using the HTML content of visited sites, Canary will send that data off to the Google Vertex API and will use the LLM to identify if a page contains extremist content.
 
 # ⚙️ Setup
 ## Option 1 - Download from the Chrome web store.
@@ -34,7 +34,7 @@ Then, to load your unpacked Chrome extension into Chrome:
 3) Click the Load unpacked button and select the downloaded repository
 
 # 🔎 Testing 
-Canary is the type of tool that you don't want to go testing on the real thing. That being the case, we have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content, you may need to view this file in a web browser separately to trigger the test.
+Canary is the type of tool that you don't want to go testing on the real thing. That being the case, I have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content, you may need to view this file in a web browser separately to trigger the test.
 
 # 📝 How It Works
 Canary is a Chrome extension that utilizes the Google Vertex AI API. Canary will gather the content of every page visited by the user and send it across to the LLM with the following prompt

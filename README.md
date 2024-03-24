@@ -31,7 +31,7 @@ Then, to load your repo:
 6) Click the Load unpacked button and select the downloaded repository
 
 # 🔎 Testing 
-Canary is the type of tool that you don't want to go testing on the real thing. That being the case we have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test-site.html) for the test file.
+Canary is the type of tool that you don't want to go testing on the real thing. That being the case we have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file.
 
 # ⏩ Example Usage
 

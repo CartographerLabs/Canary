@@ -31,9 +31,9 @@ Then, to load your repo:
 6) Click the Load unpacked button and select the downloaded repository
 
 # 🔎 Testing 
-Canary is the type of tool that you don't want to go testing on the real thing. That being the case we have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file.
+Canary is the type of tool that you don't want to go testing on the real thing. That being the case we have added a test string into Canary where when it sees the string it will treat the page as extremist content, see [here](./misc/test_site.html) for the test file. Due to how GitHub nests content you may need to view this file in a webbrowser seperately to trigger the test.
 
-# How It Works
+# 📝 How It Works
 Canary is Chrome extension that utilises the Google Vertex AI API. canary will gather the content of every page visited by the user and send it across to the LLM with the following prompt
 
 ```
@@ -55,6 +55,9 @@ The definition used for extremism in the abiove is from the [UK Government](http
     <td><img width=100% src="images/screenshots/screenshot2.png"></td>
   </tr>
 </table>
+
+# 🔨 Limitations
+Due to how web-page content is ingested to the Vertex API, on large websites it can be slow to respond. This could be addressed by streaming the content instead of waiting for it all to be returned first before processing, or by only reviweing the first 'x' characters of a webpage. 
 
 # 🙏 Contributions
 Canary is an open-source project and welcomes contributions from the community. If you would like to contribute to Canary, please follow these guidelines:

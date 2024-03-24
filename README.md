@@ -17,7 +17,7 @@ Copy code
 <br>
 </div>
 
-Canary is a Chrome extension that uses the Google Vertex AI to scan the websites you visit for extremist content and block them!
+A Chrome extension that looks out for and blocks extremist content!
 
 # ⚙️ Setup
 ## Option 1 - Download from the Chrome web store.

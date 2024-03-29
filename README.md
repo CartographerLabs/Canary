@@ -64,7 +64,8 @@ The definition used for extremism in the above is from the [UK Government](https
 </table>
 
 # 🔨 Limitations
-Due to how web-page content is ingested into the Vertex API, on large websites, it can be slow to respond. This could be addressed by streaming the content instead of waiting for it all to be returned first before processing, or by only reviewing the first 'x' characters of a webpage. 
+1) Due to how web-page content is ingested into the Vertex API, on large websites, it can be slow to respond. This could be addressed by streaming the content instead of waiting for it all to be returned first before processing, or by only reviewing the first 'x' characters of a webpage. 
+2) At the moment Canary does not support allow or deny lists for restricting which websites it gathers content from, that being the case, there is no way to limit Canary from gathering PII from visited sites without disablinmg the extension.
 
 # 🙏 Contributions
 Canary is an open-source project and welcomes contributions from the community. If you would like to contribute to Canary, please follow these guidelines:

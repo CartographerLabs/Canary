@@ -18,7 +18,7 @@ A Chrome extension that looks out for and blocks extremist content! Using the HT
 
 # ⚙️ Setup
 ## Option 1 - Download from the Chrome web store.
-If you want to use Canary as an end user, I recommend downloading it from the Chrome web store.
+If you want to use Canary as an end user, I recommend downloading it from the [Chrome web store](https://chromewebstore.google.com/detail/canary/ckbdhndglkicbpcnebjlglajljogaclj).
 
 ## Option 2 - Build manually
 You will first need to set up a project on ```console.cloud.google.com``` with the Google Vertex AI API and then set up an ```OAuth 2.0```. Once you have done this you should:

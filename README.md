@@ -48,7 +48,7 @@ The definition used for extremism in the above is from the [UK Government](https
 # ⏩ Example Usage
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=2Ov-TdwrF0s">
+  <a href="https://www.youtube.com/watch?v=fNt3L-0qt5o">
     <img src="https://img.youtube.com/vi/2Ov-TdwrF0s/0.jpg" alt="Canary Video">
   </a>
 </p>
